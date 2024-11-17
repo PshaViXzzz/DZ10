@@ -20,8 +20,6 @@ jobs:
       - uses: actions/checkout@v2
         if: always()
         continue-on-error: true
-        with:
-        path: gh-pages
       #генерируем отчёт
       - uses: simple-elf/allure-report-action@master
         if: always()
