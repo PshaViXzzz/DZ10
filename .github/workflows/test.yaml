@@ -21,7 +21,6 @@ jobs:
         if: always()
         continue-on-error: true
         with:
-        ref: gh-pages
         path: gh-pages
       #генерируем отчёт
       - uses: simple-elf/allure-report-action@master
