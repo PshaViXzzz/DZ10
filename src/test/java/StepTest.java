@@ -1,6 +1,8 @@
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebElement;
 
@@ -11,6 +13,10 @@ import static io.qameta.allure.Allure.step;
 import static org.openqa.selenium.By.linkText;
 
 public class StepTest {
+    @AfterEach
+    void afterEach() {
+        Selenide.closeWebDriver();
+    }
     private static final String REPOSITORY = "eroshenkoam/allure-example";
     private static final int ISSUE = 90;
     @Test
